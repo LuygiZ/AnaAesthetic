@@ -21,7 +21,7 @@ const services = [
     id: 4,
     name: "Brow Lamination",
     description: "Alcance sobrancelhas mais volumosas, alinhadas e com um acabamento sofisticado através do Brow Lamination – tendência que transforma o seu olhar.",
-    image: "./src/assets/brow_lamination.png"
+    image: "./src/assets/servicos/brow_lamination.png"
   },
   {
     id: 5,
