@@ -4,10 +4,10 @@ import services from '../../data/service';
 
 const ServicesSection = () => {
   return (
-    <section id="servicos" className="py-20">
+    <section id="servicos" className="py-20 bg-[#2c2c2c] text-[#fffbf0]">
       <div className="container mx-auto px-4">
         <SectionTitle>Nossos Serviços</SectionTitle>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-[#eae6da] mb-12 max-w-2xl mx-auto">
           Oferecemos tratamentos personalizados para realçar a sua beleza com produtos de qualidade premium e técnicas avançadas.
         </p>
         

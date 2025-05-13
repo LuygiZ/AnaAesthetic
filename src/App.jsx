@@ -12,28 +12,25 @@ import BackToTopButton from './components/ui/BackToTopButton';
 function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [showBackToTop, setShowBackToTop] = useState(false);
-  
-  // Handle scroll events
+
   useEffect(() => {
     const handleScroll = () => {
-      // Show back to top button when scrolled down
       setShowBackToTop(window.scrollY > 300);
-      
-      // Update active section based on scroll position
+
       const sections = document.querySelectorAll('section[id]');
       sections.forEach(section => {
         const sectionTop = section.offsetTop - 100;
         const sectionHeight = section.offsetHeight;
-        if(window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
           setActiveSection(section.getAttribute('id'));
         }
       });
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -43,16 +40,16 @@ function App() {
       });
     }
   };
-  
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
   };
-  
+
   return (
-    <div className="min-h-screen bg-pink-50 font-sans">
+    <div className="min-h-screen bg-[#1c1c1c] text-[#fffbf0] font-sans">
       <Header 
         activeSection={activeSection} 
         scrollToSection={scrollToSection} 

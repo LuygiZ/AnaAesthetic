@@ -4,34 +4,36 @@ import ContactItem from '../ui/ContactItem';
 
 const ContactSection = () => {
   return (
-    <section id="contacto" className="py-20">
+    <section id="contacto" className="py-20 bg-[#2c2c2c] text-[#ffffff]">
       <div className="container mx-auto px-4">
-        <SectionTitle>Contactos</SectionTitle>
-        
+        <SectionTitle cor="#d4af37">Contactos</SectionTitle>
+
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="lg:w-1/2">
-            <div className="bg-white rounded-xl shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-pink-600 mb-6">Informações de Contacto</h3>
-              
-              <div className="space-y-6">
-                <ContactItem icon={<MapPin />} title="Endereço">
+            <div className="bg-[#1e1e1e] rounded-xl shadow-lg p-6 text-justify border border-[#d4af37]/30">
+              <h3 className="text-xl font-semibold text-[#d4af37] mb-6 text-center">
+                Informações de Contacto
+              </h3>
+
+              <div className="space-y-6 max-w-md mx-auto text-[#f8f8f8]">
+                <ContactItem icon={<MapPin className="text-[#d4af37]" />} title="Endereço">
                   Rua das Flores, 123, Centro<br />
                   Lisboa, Portugal
                 </ContactItem>
-                
-                <ContactItem icon={<Phone />} title="Telefone">
+
+                <ContactItem icon={<Phone className="text-[#d4af37]" />} title="Telefone">
                   +351 912 345 678
                 </ContactItem>
-                
-                <ContactItem icon={<Mail />} title="Email">
-                  info@belaestetica.pt
+
+                <ContactItem icon={<Mail className="text-[#d4af37]" />} title="Email">
+                  info@rodriguesaesthetics.pt
                 </ContactItem>
-                
-                <ContactItem icon={<Instagram />} title="Instagram">
-                  @bela.estetica
+
+                <ContactItem icon={<Instagram className="text-[#d4af37]" />} title="Instagram">
+                  @rodriguesaesthetics
                 </ContactItem>
-                
-                <ContactItem icon={<Clock />} title="Horário de Funcionamento">
+
+                <ContactItem icon={<Clock className="text-[#d4af37]" />} title="Horário de Funcionamento">
                   Segunda a Sexta: 9h - 19h<br />
                   Sábado: 9h - 16h<br />
                   Domingo: Fechado
@@ -39,15 +41,14 @@ const ContactSection = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="lg:w-1/2">
-            <div className="h-full min-h-72 bg-gray-300 rounded-xl shadow-lg overflow-hidden">
-              {/* Google Maps would go here - using placeholder */}
-              <div className="h-full w-full flex items-center justify-center bg-pink-100">
-                <div className="text-center p-4">
-                  <MapPin size={48} className="mx-auto text-pink-600 mb-2" />
-                  <p className="text-gray-700">Mapa com a localização da Bela Estética</p>
-                </div>
+            <div className="h-full min-h-72 bg-[#1e1e1e] rounded-xl shadow-lg overflow-hidden flex items-center justify-center border border-[#d4af37]/30">
+              <div className="text-center p-4">
+                <MapPin size={48} className="mx-auto text-[#d4af37] mb-2" />
+                <p className="text-[#fffbf0]">
+                  Mapa com a localização
+                </p>
               </div>
             </div>
           </div>
